@@ -1,35 +1,53 @@
-console.table(productos);
+let carrito = [];
 
-let hoy = new Date().getDay();
-const diasDeSemana = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
-alert(`Espero que estes teniendo un hermoso ${diasDeSemana[hoy-1]}`);
+// cards de los productos
+let articuloCartas = document.getElementById('cartas');
+articuloCartas.classList.add('container')
+articuloCartas.classList.add('gap-3')
 
-function filtradoPorPrecioMax(precioMaximo) {
-    const filtrados = productos.filter((producto) => producto.precio <= precioMaximo);
-    
+const tablaBody = document.getElementById('tablabody');
 
-    if (filtrados.length != 0) {
-        
-        let textoAlert = '';
-        filtrados.forEach((producto) => {
-            textoAlert += `ID: ${producto.id} - Nombre: ${producto.nombre} - Precio $ ${producto.precio}\n`;
-        });
-        alert(textoAlert);
-    } else {
-        alert('Lo sentimos, no encontramos productos por ese precio');
-    }
+
+for (const producto of productos){
+    articuloCartas.innerHTML += `
+    <div class="card" style="width: 18rem;">
+        <img src="${producto.foto}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">Precio: U$D ${producto.precio}</p>
+            <button id="${producto.id}" class="btn btn-primary compra">Agregar al carrito</button>
+        </div>
+    </div>
+    `
+};
+
+
+let botones = document.getElementsByClassName('compra');
+for(const boton of botones){
+    boton.addEventListener('click', () =>{
+        console.log('Hiciste click en el boton cuyo id es '+boton.id)
+        const prodAlCarrito = productos.find ((producto) =>producto.id == boton.id);
+        console.log(prodAlCarrito);
+        //Carga producto en el carrito de compras
+        agregarAlCarrito(prodAlCarrito);
+    });
+
+
+    boton.onmouseover = () => boton.classList.replace('btn-primary', 'btn-warning');
+    boton.onmouseout = () => boton.classList.replace('btn-warning', 'btn-primary');
 }
 
-let precio = parseFloat(prompt('Ingresa el precio maximo que puedes abonar (0-salir del programa)'));
+function agregarAlCarrito(prod){
+    carrito.push(prod);
+    console.table(carrito);
+    alert(`Agregaste ${prod.nombre} al carrito`);
 
-while (precio != 0) {
-    filtradoPorPrecioMax(precio);
-
-    precio = parseFloat(prompt('Ingresa el precio maximo que puedes abonar (0-salir del programa)'));
+    //agregado de producto a la tabla
+    tablaBody.innerHTML += `
+        <tr>
+            <td>${prod.id}</td>
+            <td>${prod.nombre}</td>
+            <td>${prod.precio}</td>
+        </tr>
+    `
 }
-
-let numAzar = Math.round(Math.random() * (productos.length - 1) + 1);
-
-let productoAzar = productos[numAzar];
-alert(`OFERTA DEL MES\n${productoAzar.nombre} ... $ ${productoAzar.precio}`);
-
