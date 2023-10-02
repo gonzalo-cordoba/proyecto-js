@@ -5,6 +5,7 @@ let articuloCartas = document.getElementById('cartas');
 articuloCartas.classList.add('container')
 articuloCartas.classList.add('gap-3')
 
+
 const tablaBody = document.getElementById('tablabody');
 
 

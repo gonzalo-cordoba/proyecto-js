@@ -1,0 +1,236 @@
+@media(min-width: 768px){
+    .h1-venta-camiseta{
+
+        display: grid;
+        place-items: center;
+        width: 100%;
+        margin-top: 1rem;
+    
+        background-color: $c-verde-li-a;
+
+        font-family: $ff-rem;
+        font-size: 2.5rem;
+        font-size: 1.438rem;
+        color: $c-blanco;
+    
+    }
+    
+    .parrafo-venta{
+        display: grid;
+        align-items: center;
+        font-family: $ff-rem;
+        font-size: 1.5rem;
+        background-color: $c-verde-principal;
+        color: $c-blanco;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+    
+    }
+    .form-venta{
+        width: 100%;
+        max-width: 400px;
+        background: $c-verde-li-a;
+        padding: 30px;
+        padding-left: 0.5rem;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 45px;
+        font-family: $ff-calibri;
+        color: $c-blanco;
+    }
+    
+    .controls{
+        width: 100%;
+        background: $c-blanco-smoke;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid $c-azul-controls;
+        font-family: $ff-rem;
+        font-size: 1.125rem;
+    }
+    
+    textarea{
+        resize: none;
+        width: 300px;
+        height: 100px;
+    
+        margin-bottom: 2rem;
+    }
+    
+    .form-venta .botons{
+        width: 100%;
+        background: greenyellow;
+        border: none;
+        padding: 12px;
+        color: $c-blanco;
+        margin: 16px 0;
+        font-size: 1rem;
+    }
+
+    .h3-venta{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 60px;
+
+        
+
+
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        
+        background-color: greenyellow;
+        color: white;
+    }
+
+    .map{
+        display: block;
+        margin: 0 auto;
+
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    
+
+}
+
+/* ---- Seccion vende tu camiseta Desktop ---- */
+
+@media(min-width: 1200px){
+    .h1-venta-camiseta{
+    
+        display: grid;
+        place-items: center;
+        width: 100%;
+        margin-top: 1rem;
+    
+        background-color: $c-verde-h1;
+    
+        font-family: $ff-rem;
+        font-size: 3rem;
+        color: $c-blanco;
+    
+    }
+    
+    .parrafo-venta{
+        display: grid;
+        align-items: center;
+        font-family: $ff-rem;
+        font-size: 2rem;
+    }
+
+    .h3-venta{
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+        height: 60px;
+
+        
+
+
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        
+        background-color: greenyellow;
+        color: white;
+    }
+
+    .map{
+        display: block;
+        margin: 0 auto;
+
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    
+    }
+
+
+
+@media(max-width: 768px){
+/* ---- Seccion vende tu camiseta mobile ---- */
+
+.h1-venta-camiseta{
+
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 1rem;
+
+    font-family: $ff-raleway;
+    background-color: $c-verde-li-a;
+
+    font-size: 2.5rem;
+    font-size: 1.438rem;
+    color: $c-blanco;
+
+}
+
+.parrafo-venta{
+    display: grid;
+    align-items: center;
+    font-family: $ff-rem;
+    font-size: 1rem;
+    background-color: $c-verde-principal;
+    color: $c-blanco;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+
+}
+.form-venta{
+    width: 100%;
+    max-width: 400px;
+    background: $c-verde-li-a;
+    padding: 30px;
+    padding-left: 0.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 45px;
+    font-family: $ff-calibri;
+    color: $c-blanco;
+}
+
+.controls{
+    width: 100%;
+    background: $c-blanco-smoke;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid $c-azul-controls;
+    font-family: $ff-raleway;
+    font-size: 1.125rem;
+}
+
+textarea{
+    resize: none;
+    width: 300px;
+    height: 100px;
+
+    margin-bottom: 2rem;
+}
+
+.form-venta .botons{
+    width: 100%;
+    background: greenyellow;
+    border: none;
+    padding: 12px;
+    color: $c-blanco;
+    margin: 16px 0;
+    font-size: 1rem;
+}
+
+.h3-venta{
+    display: none;
+}
+
+.map{
+   display: none;
+}
+}

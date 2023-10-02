@@ -18,7 +18,7 @@ const productos = [{
     },
     {
         id: 4,
-        foto: "https://us02-imgcdn.ymcart.com/31229/2022/08/26/a/9/a99efaee8fd01946.jpg?x-oss-process=image/quality,Q_80/resize,m_lfit,w_1500,h_1500/interlace,0/format,webp",
+        foto: "https://us03-imgcdn.ymcart.com/97006/2023/03/25/7/7/77217b0a189f9c40.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp",
         nombre: "Camiseta Titular River Plate",
         precio: 950
     },
