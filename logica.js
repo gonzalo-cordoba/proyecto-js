@@ -41,7 +41,14 @@ for(const boton of botones){
 function agregarAlCarrito(prod){
     carrito.push(prod);
     console.table(carrito);
-    alert(`Agregaste ${prod.nombre} al carrito`);
+
+    Swal.fire({
+        title: 'Producto Agregado',
+        text: `Agregaste ${prod.nombre} al carrito`,
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2000 
+    });
 
     //agregado de producto a la tabla
     tablaBody.innerHTML += `
