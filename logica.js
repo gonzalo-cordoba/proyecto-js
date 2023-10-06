@@ -52,3 +52,4 @@ function agregarAlCarrito(prod){
         </tr>
     `
 }
+
