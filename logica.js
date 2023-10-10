@@ -9,6 +9,7 @@ articuloCartas.classList.add('gap-3')
 const tablaBody = document.getElementById('tablabody');
 
 
+
 for (const producto of productos){
     articuloCartas.innerHTML += `
     <div class="card" style="width: 18rem;">
@@ -38,6 +39,7 @@ for(const boton of botones){
     boton.onmouseout = () => boton.classList.replace('btn-warning', 'btn-primary');
 }
 
+    
 function agregarAlCarrito(prod){
     carrito.push(prod);
     console.table(carrito);
@@ -59,4 +61,5 @@ function agregarAlCarrito(prod){
         </tr>
     `
 }
+
 
